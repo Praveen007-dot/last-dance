@@ -10,8 +10,8 @@ const SCAN_LINES = [
   { text: 'DESCENDING ORBIT: ANDHRA PRADESH // VISAKHAPATNAM', delay: 2800, highlight: true },
   { text: 'COORDINATES LOCKED: 17.7304° N, 83.3084° E', delay: 3800 },
   { text: 'TARGET CAMPUS FOUND: DWARAKA NAGAR', delay: 4500 },
-  { text: 'PRISM DEGREE & PG COLLEGE', delay: 5200, highlight: true, large: true },
-  { text: 'TEACHER BEACONS ONLINE', delay: 6000 },
+  { text: 'PRISM DEGREE & PG COLLEGE // MAIN BLOCK', delay: 5200, highlight: true, large: true },
+  { text: 'ALL TEACHER LOGOS ONLINE IN COLLEGE BLOCK', delay: 6000 },
 ];
 
 interface ScanOverlayProps {

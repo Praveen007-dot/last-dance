@@ -19,8 +19,19 @@ export default function HeroSection({ onEnter }: HeroSectionProps) {
     audio.volume = 1;
     audioRef.current = audio;
 
+    audio.onplay = () => {
+      setIsPlayingVoice(true);
+      window.dispatchEvent(new CustomEvent('voice-playback-state', { detail: { isPlaying: true } }));
+    };
+
     audio.onended = () => {
       setIsPlayingVoice(false);
+      window.dispatchEvent(new CustomEvent('voice-playback-state', { detail: { isPlaying: false } }));
+    };
+
+    audio.onpause = () => {
+      setIsPlayingVoice(false);
+      window.dispatchEvent(new CustomEvent('voice-playback-state', { detail: { isPlaying: false } }));
     };
 
     audio.onerror = () => {
@@ -29,6 +40,7 @@ export default function HeroSection({ onEnter }: HeroSectionProps) {
         audioRef.current.load();
       } else {
         setIsPlayingVoice(false);
+        window.dispatchEvent(new CustomEvent('voice-playback-state', { detail: { isPlaying: false } }));
       }
     };
 
@@ -88,6 +100,7 @@ export default function HeroSection({ onEnter }: HeroSectionProps) {
       audioRef.current = null;
     }
     stopAllVoices();
+    window.dispatchEvent(new CustomEvent('voice-playback-state', { detail: { isPlaying: false } }));
     onEnter();
   };
 

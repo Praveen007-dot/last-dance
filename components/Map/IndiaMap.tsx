@@ -17,8 +17,8 @@ interface IndiaMapProps {
 function buildMarkerHtml(isDone: boolean) {
   if (isDone) {
     return `
-      <div style="width:44px;height:44px;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;">
-        <svg width="44" height="44" viewBox="0 0 38 38" fill="none" style="filter:drop-shadow(0 2px 6px rgba(0,0,0,0.9));">
+      <div style="width:34px;height:34px;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+        <svg width="34" height="34" viewBox="0 0 38 38" fill="none" style="filter:drop-shadow(0 2px 6px rgba(0,0,0,0.9));">
           <polygon points="19,2 34,10.5 34,27.5 19,36 4,27.5 4,10.5"
             fill="#16a34a" stroke="#4ade80" stroke-width="2.5" stroke-linejoin="round"/>
           <text x="19" y="25" text-anchor="middle" fill="#ffffff" font-size="15"
@@ -27,26 +27,26 @@ function buildMarkerHtml(isDone: boolean) {
       </div>`;
   }
   return `
-    <div style="width:56px;height:56px;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+    <div style="width:40px;height:40px;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;">
       <!-- Pulsing cyan target reticle ring -->
       <div style="
-        position:absolute;inset:-10px;border-radius:50%;
+        position:absolute;inset:-6px;border-radius:50%;
         border:2px dashed #3ca9e8;
-        box-shadow:0 0 14px rgba(60,169,232,0.8);
+        box-shadow:0 0 10px rgba(60,169,232,0.8);
         animation:target-reticle-pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
         pointer-events:none;
       "></div>
       <!-- Spotlight aura -->
       <div style="
-        position:absolute;inset:-4px;border-radius:50%;
+        position:absolute;inset:-3px;border-radius:50%;
         background:radial-gradient(circle,rgba(60,169,232,0.35) 0%,transparent 75%);
         pointer-events:none;
       "></div>
       <!-- Hexagonal Pixel SVG Token with Graduation Cap -->
-      <svg width="46" height="46" viewBox="0 0 38 38" fill="none"
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
         style="filter:drop-shadow(0 3px 6px rgba(0,0,0,0.9));">
         <polygon points="19,2 34,10.5 34,27.5 19,36 4,27.5 4,10.5"
-          fill="#ffffff" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/>
+          fill="#ffffff" stroke="#000000" stroke-width="3" stroke-linejoin="round"/>
         <!-- Graduation Cap Board (rhombus) -->
         <polygon points="19,9 28,14 19,19 10,14" fill="#121212"/>
         <!-- Skullcap -->
@@ -66,7 +66,7 @@ function buildTooltipHtml(teacher: Teacher, isDone: boolean) {
         padding:5px 12px;border-radius:6px;
         box-shadow:0 0 14px rgba(74,222,128,0.6),0 3px 8px rgba(0,0,0,0.9);
         font-family:'Press Start 2P',monospace;font-size:9px;text-align:center;white-space:nowrap;">
-        <div style="color:#4ade80;font-size:8px;margin-bottom:2px;">✓ DISCOVERED</div>
+        <div style="color:#4ade80;font-size:8px;margin-bottom:2px;">✓ PRISM COLLEGE BLOCK</div>
         <div style="font-size:10px;font-weight:bold;">${teacher.name.toUpperCase()}</div>
         <div style="color:#86efac;font-size:8px;margin-top:2px;">${teacher.subject}</div>
       </div>`;
@@ -76,7 +76,7 @@ function buildTooltipHtml(teacher: Teacher, isDone: boolean) {
       padding:6px 14px;border-radius:6px;
       box-shadow:0 0 16px rgba(60,169,232,0.7),0 3px 8px rgba(0,0,0,0.9);
       font-family:'Press Start 2P',monospace;font-size:9px;text-align:center;white-space:nowrap;">
-      <div style="color:#00ff9d;margin-bottom:3px;font-size:8px;">● TARGET DETECTED</div>
+      <div style="color:#00ff9d;margin-bottom:3px;font-size:8px;">● PRISM COLLEGE BLOCK</div>
       <div style="font-size:10px;font-weight:bold;">${teacher.name.toUpperCase()}</div>
       <div style="color:#3ca9e8;font-size:9px;margin-top:2px;">${teacher.subject}</div>
       <div style="color:#ffb800;font-size:8px;margin-top:3px;">[ CLICK TO IDENTIFY ]</div>
@@ -168,9 +168,9 @@ export default function IndiaMap({
       const icon = L.divIcon({
         html:        buildMarkerHtml(isDone),
         className:   'pixel-custom-marker',
-        iconSize:    isDone ? [44, 44] : [56, 56],
-        iconAnchor:  isDone ? [22, 22] : [28, 28],
-        tooltipAnchor: [0, -30],
+        iconSize:    isDone ? [34, 34] : [40, 40],
+        iconAnchor:  isDone ? [17, 17] : [20, 20],
+        tooltipAnchor: [0, -22],
       });
 
       const marker = L.marker([teacher.location.lat, teacher.location.lng], { icon })
@@ -187,8 +187,8 @@ export default function IndiaMap({
           return;
         }
         const z = map.getZoom();
-        if (z < 16) {
-          map.flyTo([teacher.location.lat, teacher.location.lng], 18, {
+        if (z < 18) {
+          map.flyTo([teacher.location.lat, teacher.location.lng], 19, {
             animate: true, duration: 2.2,
           });
         } else {
@@ -199,9 +199,9 @@ export default function IndiaMap({
       markersRef.current.set(teacher.id, marker);
     });
 
-    // Cinematic auto-zoom on mount: world → campus
+    // Cinematic auto-zoom on mount: world → PRISM College Block
     const flyTimer = setTimeout(() => {
-      map.flyTo([TARGET_LOCATION.lat, TARGET_LOCATION.lng], 18, {
+      map.flyTo([TARGET_LOCATION.lat, TARGET_LOCATION.lng], 19, {
         animate: true, duration: 4.2, easeLinearity: 0.18,
       });
       setTimeout(() => setViewState('target'), 4400);
@@ -225,9 +225,9 @@ export default function IndiaMap({
       marker.setIcon(L.divIcon({
         html:       buildMarkerHtml(isDone),
         className:  'pixel-custom-marker',
-        iconSize:   isDone ? [44, 44] : [56, 56],
-        iconAnchor: isDone ? [22, 22] : [28, 28],
-        tooltipAnchor: [0, -30],
+        iconSize:   isDone ? [34, 34] : [40, 40],
+        iconAnchor: isDone ? [17, 17] : [20, 20],
+        tooltipAnchor: [0, -22],
       }));
       marker.unbindTooltip();
       marker.bindTooltip(buildTooltipHtml(teacher, isDone), {

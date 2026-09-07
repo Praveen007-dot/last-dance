@@ -14,16 +14,18 @@ export const VIZAG_CENTER = { lat: TARGET_LOCATION.lat, lng: TARGET_LOCATION.lng
 export const INDIA_CENTER = { lat: 22.9734, lng: 78.6569 };
 
 // Specific real positions around the PRISM Degree College campus building and adjacent street points
-// Distinct tactical coordinates distributed cleanly around PRISM Degree College campus
-// One dedicated coordinate per teacher marker
+// All 10 teacher logos positioned strictly inside the PRISM Degree & PG College building block
 const CAMPUS_POINTS = [
-  { lat: 17.730435, lng: 83.308419 }, // Center Main Block
-  { lat: 17.731050, lng: 83.308420 }, // North Block / Gurudwara Rd
-  { lat: 17.729820, lng: 83.308420 }, // South Campus Wing
-  { lat: 17.730435, lng: 83.309100 }, // East Corridor / Lab Block
-  { lat: 17.730435, lng: 83.307740 }, // West Entrance Pathway
-  { lat: 17.730880, lng: 83.308900 }, // North-East Wing
-  { lat: 17.729990, lng: 83.307940 }, // South-West Quad
+  { lat: 17.730435, lng: 83.308419 }, // PRISM College Block - Center Main Hall
+  { lat: 17.730495, lng: 83.308420 }, // PRISM College Block - North Entrance Wing
+  { lat: 17.730375, lng: 83.308418 }, // PRISM College Block - South Academic Wing
+  { lat: 17.730435, lng: 83.308480 }, // PRISM College Block - East Lab Wing
+  { lat: 17.730435, lng: 83.308355 }, // PRISM College Block - West Seminar Hall
+  { lat: 17.730480, lng: 83.308465 }, // PRISM College Block - North-East PG Section
+  { lat: 17.730385, lng: 83.308370 }, // PRISM College Block - South-West Tech Quad
+  { lat: 17.730470, lng: 83.308380 }, // PRISM College Block - Central Courtyard
+  { lat: 17.730390, lng: 83.308460 }, // PRISM College Block - Innovation Hub
+  { lat: 17.730440, lng: 83.308440 }, // PRISM College Block - Executive Wing
 ];
 
 export const teachers: Teacher[] = [
@@ -138,6 +140,54 @@ export const teachers: Teacher[] = [
     specialAbilityDesc: 'Very strict — maybe that’s what comes with great knowledge! Always pushes students to maintain high standards.',
     description:
       'Very strict — maybe that’s what comes with great knowledge! Always pushes students to maintain high standards, and has one golden rule Attendance matters.',
+  },
+  {
+    id: 'teacher-08',
+    name: 'Uma Mam',
+    subject: 'Python, AI, Database Management System, Computer Science HOD',
+    photo: '/teachers/teacher-08.jpg',
+    rank: 'BIG MADAM // CS HOD',
+    location: CAMPUS_POINTS[7],
+    stats: { knowledge: 100, patience: 99, anger: 35, humour: 88, classControl: 100 },
+    mood: 'BIG MADAM STATUS',
+    moodEmoji: '👑',
+    moodDescription: 'Known for her leadership and, of course, Big Madam status! 😄',
+    specialAbility: 'PRACTICALS STRICT MODE',
+    specialAbilityDesc: 'Always fighting to bring interviews and opportunities to this tier-three college. But when it comes to practicals, Ma’am becomes strict mode ON! 😂',
+    description:
+      'Known for her leadership and, of course, Big Madam status! 😄 Always fighting to bring interviews and opportunities to this tier-three college, so that students can reach better positions. Ma’am has unlimited patience, always encourages students to reach their goals, and is ever ready with guidance. And when it comes to teaching, she has her own unique style — conceptual clarity, comprehensive explanation, and clarity until the concept is completely clear! 😄 But when it comes to practicals, Ma’am becomes strict mode ON! 😂',
+  },
+  {
+    id: 'teacher-09',
+    name: 'Krupa Mam',
+    subject: 'Mathematics, Mathematics HOD',
+    photo: '/teachers/teacher-09.jpg',
+    rank: 'LEGENDARY MATHS HOD',
+    location: CAMPUS_POINTS[8],
+    stats: { knowledge: 100, patience: 99, anger: 25, humour: 92, classControl: 98 },
+    mood: 'CHEERFUL & PIN-TO-PIN',
+    moodEmoji: '📐',
+    moodDescription: 'Very strong, very cheerful, and surprisingly close with students! 😄',
+    specialAbility: 'PIN-TO-PIN EXPLANATION',
+    specialAbilityDesc: 'Pin-to-pin explanation for every single step, and strictly sticking to the basics. Plus, she knows exactly who is talking in class no matter which corner they are hiding in! 😂',
+    description:
+      'Maths HOD Ma’am — the most experienced Maths faculty in our college. Very strong, very cheerful, and surprisingly close with students — even from other departments! 😄 She has a soft corner for students, always making sure concepts are easier to learn. Always busy with teaching, giving pin-to-pin explanation for every single step, and strictly sticking to the basics. And one of the most important things — Ma’am knows exactly who is talking in the class, no matter which corner they are hiding in! 😂 And when it comes to practicals, she’s one of the best faculty! 😄 And one of the cutest things about Ma’am is how much she loves her daughter. Sometimes, during leisure time in class, Ma’am even does her daughter’s homework — that itself shows how much love she has for her! ❤️ And Ma’am even plays alphabet games with us in classroom, which makes us feel like she’s simply continuing her habit of playing with her daughter! 😄 She always aims to see her daughter in a great position, and just like that,she want all of us to reach great positions too.',
+  },
+  {
+    id: 'teacher-10',
+    name: 'Sunitha Mam',
+    subject: 'Chemistry, Most Experienced Faculty',
+    photo: '/teachers/teacher-10.jpg',
+    rank: 'MOST EXPERIENCED FACULTY AWARD // CHEMISTRY',
+    location: CAMPUS_POINTS[9],
+    stats: { knowledge: 100, patience: 100, anger: 10, humour: 88, classControl: 95 },
+    mood: 'CALM & PEACEFUL',
+    moodEmoji: '🕊️',
+    moodDescription: 'Especially known for her calm, peaceful personality and kind-hearted nature. ❤️',
+    specialAbility: 'TIMELESS WISDOM & GENEROSITY',
+    specialAbilityDesc: 'Makes even difficult concepts feel easy to understand. Knows almost every story that happened in this college — but always calm, always kind! ❤️',
+    description:
+      'Chemistry Ma’am — the most experienced Chemistry faculty in our college. Very kind-hearted, simple in nature, and extremely generous. Her way of teaching makes even difficult concepts feel easy to understand. She is especially known for her calm and peaceful personality. ❤️ Ma’am taught our CS department only in the first semester, but even after that, CS will always remember her and her wonderful personality! 😄 Last time, she received the Most Experienced Faculty Award in the college — and honestly, Ma’am probably knows almost every story that happened in this college! 😂 But even after knowing all those stories, she never has that aggressive intent — always calm, always kind! ❤️',
   },
 ];
 

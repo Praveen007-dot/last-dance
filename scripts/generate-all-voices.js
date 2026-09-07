@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const API_KEY = process.env.CARTESIA_API_KEY || 'sk_car_skPcx4Nc8ceyEa4Nn2kpQP';
-const VOICE_ID = '459e168a-b63f-43e3-a835-dcc2f7d7b13e'; // Your custom cloned voice
+const API_KEY = process.env.CARTESIA_API_KEY || 'sk_car_aBHryhYoSFddao7c2VbCvc';
+const VOICE_ID = 'e9e30a44-cd20-4127-807a-1843bddb75d9'; // Your custom cloned voice
 const MODEL_ID = 'sonic-3.6';
 const CARTESIA_VERSION = '2024-06-10';
 
@@ -108,13 +108,18 @@ const teachersData = [
   },
   {
     id: 'teacher-08',
-    detectText: 'Network verified! Computer Science cyber specialist detected!',
-    profileText: 'Mana Computer Science cyber specialist! Digital matrix and computing principles ni disciplined ga nerpinchi, manalni technical ga train chesina awesome teacher!'
+    detectText: "Target confirmed! Uma Ma'am! Computer Science H O D and Big Madam detected!",
+    profileText: "Uma Ma'am! Known for her leadership and, of course, Big Madam status! Always fighting to bring interviews and opportunities to this tier-three college, so that students can reach better positions. Ma'am has unlimited patience, always encourages students to reach their goals, and is ever ready with guidance. And when it comes to teaching, she has her own unique style: conceptual clarity, comprehensive explanation, and clarity until the concept is completely clear! But when it comes to practicals, Ma'am becomes strict mode ON!"
   },
   {
     id: 'teacher-09',
-    detectText: 'Beacon locked! Computer Science knowledge navigator detected!',
-    profileText: 'Mana Computer Science knowledge navigator! Prathee student ki full encouragement isthoo, career lo high achievement reach avvalani guide chesina super faculty boss!'
+    detectText: "Target confirmed! Krupa Ma'am! Legendary Mathematics H O D detected!",
+    profileText: "Krupa Ma'am! Maths H O D Ma'am, the most experienced Maths faculty in our college! Very strong, very cheerful, and surprisingly close with students, even from other departments! She has a soft corner for students, always making sure concepts are easier to learn. Always busy with teaching, giving pin-to-pin explanation for every single step, and strictly sticking to the basics. And one of the most important things: Ma'am knows exactly who is talking in the class, no matter which corner they are hiding in! And when it comes to practicals, she is one of the best faculty! And one of the cutest things about Ma'am is how much she loves her daughter. Sometimes, during leisure time in class, Ma'am even does her daughter's homework, that itself shows how much love she has for her! And Ma'am even plays alphabet games with us in classroom, which makes us feel like she is simply continuing her habit of playing with her daughter! She always aims to see her daughter in a great position, and just like that, she wants all of us to reach great positions too."
+  },
+  {
+    id: 'teacher-10',
+    detectText: "Target confirmed! Sunitha Ma'am! Chemistry and Most Experienced Faculty Award detected!",
+    profileText: "Sunitha Ma'am! Chemistry Ma'am, the most experienced Chemistry faculty in our college! Very kind hearted, simple in nature, and extremely generous. Her way of teaching makes even difficult concepts feel easy to understand. She is especially known for her calm and peaceful personality. Ma'am taught our C S department only in the first semester, but even after that, C S will always remember her and her wonderful personality! Last time, she received the Most Experienced Faculty Award in the college, and honestly, Ma'am probably knows almost every story that happened in this college! But even after knowing all those stories, she never has that aggressive intent: always calm, always kind!"
   }
 ];
 
