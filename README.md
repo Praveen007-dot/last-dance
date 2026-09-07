@@ -4,7 +4,7 @@
 [![React 19](https://img.shields.io/badge/React-19.2.8-blue?style=for-the-badge&logo=react)](https://react.dev/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind-v4.0-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 [![Cartesia AI](https://img.shields.io/badge/AI%20Voice-Cartesia%20Sonic--3.6-7c3aed?style=for-the-badge)](https://cartesia.ai/)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://last-dance-zeta.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-lastdance--tribute.vercel.app-success?style=for-the-badge&logo=vercel)](https://lastdance-tribute.vercel.app)
 
 > *"Our Final Year. Their Last Bell. Our Tribute."*  
 > An interactive Cyberpunk / Tactical RPG tribute and recon system built to honor the legendary faculty members of **PRISM Degree & PG College** on Teacher's Day.
@@ -13,7 +13,7 @@
 
 ## 🌟 Live Preview
 
-- 🌐 **Live Website**: [https://last-dance-zeta.vercel.app](https://last-dance-zeta.vercel.app)
+- 🌐 **Primary Live Website**: [https://lastdance-tribute.vercel.app](https://lastdance-tribute.vercel.app)
 - 📁 **GitHub Repository**: [https://github.com/Praveen007-dot/last-dance](https://github.com/Praveen007-dot/last-dance)
 
 ---
